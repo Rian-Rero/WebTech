@@ -44,8 +44,8 @@ function Cadastro() {
         sobre,
         senha,
       });
-      setUsuario(res.data);
-      navigate("/login"); // Redirecionamento para a rota de login após o cadastro bem-sucedido
+      
+      navigate("/login"); 
     } catch (erro) {
       console.error(erro);
       alert(erro.response.data.message);
