@@ -54,7 +54,7 @@ function Ouvidoria() {
 
             <Nome>
               <BsFillTelephoneOutboundFill />
-              Nosso 0800: 0800-XXX-XXXX
+              0800: 0800-XXX-XXXX
             </Nome>
           </Dados>
         </Coluna2>

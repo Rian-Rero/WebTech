@@ -92,6 +92,7 @@ export const Nome = styled.text`
   text-align: center;
   box-sizing: border-box;
   width: 100%;
+  gap: 30px;
   display: flex;
   text-align: center;
   align-items: center;
