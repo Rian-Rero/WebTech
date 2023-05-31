@@ -52,9 +52,12 @@ export const StyledTable = styled(Table)`
 
 export const Botao = styled.button`
   background-color: #2f2e6f;
+  margin-left: 40px;
   border: none;
   cursor: pointer;
+  color: white;
   border-radius: 20px;
+  font-size: 20px;
 `;
 
 export const Div2 = styled.div`

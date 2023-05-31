@@ -44,8 +44,8 @@ function Cadastro() {
         sobre,
         senha,
       });
-      
-      navigate("/login"); 
+
+      navigate("/login");
     } catch (erro) {
       console.error(erro);
       alert(erro.response.data.message);
