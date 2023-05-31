@@ -39,7 +39,6 @@ const Sidebar = ({ active }) => {
               Text="Cadastro"
               onClick={() => navigate("/cadastro")}
             />
-            ´
           </>
         )}
         {!!usuario && (
