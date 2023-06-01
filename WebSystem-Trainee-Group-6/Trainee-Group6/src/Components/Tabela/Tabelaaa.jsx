@@ -13,6 +13,7 @@ import {
   Body,
 } from "./style";
 import useAuthStore from "../../stores/auth";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Tabelaaa() {
   const [usuarios, setUsuarios] = useState([]);
@@ -62,6 +63,7 @@ function Tabelaaa() {
     try {
       await api.delete(`/sessoes/${idUsuario}`);
       getSessoes();
+      scroll.scrollTo(tabelaWrapperOffset());
     } catch (erro) {
       console.error(erro);
       alert(erro.response.data.message);
@@ -72,10 +74,16 @@ function Tabelaaa() {
     try {
       await api.post("/sessoes", { id_usuario: idUsuario });
       getSessoes();
+      scroll.scrollTo(tabelaWrapperOffset());
     } catch (erro) {
       console.error(erro);
       alert(erro.response.data.message);
     }
+  };
+
+  const tabelaWrapperOffset = () => {
+    const tabelaWrapperElement = document.getElementById("tabela-wrapper");
+    return tabelaWrapperElement.offsetTop;
   };
 
   if (carregando) {
@@ -137,7 +145,7 @@ function Tabelaaa() {
 
   return (
     <Body>
-      <TabelaWrapper>
+      <TabelaWrapper id="tabela-wrapper">
         <Div3>
           <h1>Ações:</h1>
           {temSessaoAtiva ? (

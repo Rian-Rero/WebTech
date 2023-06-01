@@ -2,9 +2,17 @@ import styled from "styled-components";
 import PoppinsB from "../../font/Poppins-Black.ttf";
 
 export const Imagem = styled.image`
-  font-size: 2200%;
   color: white;
-  height: 60%;
+
+  width: 545px;
+  @media screen and (max-width: 860px) {
+    width: 100%;
+  }
+`;
+
+export const Imagem2 = styled.image`
+  width: 100%;
+
   @media screen and (max-width: 342px) {
     font-size: 1500%;
     > img {
@@ -19,27 +27,31 @@ export const Body = styled.div`
 export const Caixa = styled.div`
   display: flex;
   width: 60%;
-  height: 40%;
-  margin-bottom: 90px;
+
   @media screen and (max-width: 838px) {
   }
 `;
 
 export const Coluna = styled.div`
   font-family: "Poppins";
-  margin-left: 70px;
+  margin-left: 100px;
   display: flex;
   flex-direction: column;
-  width: 60%;
-  height: 92%;
-  justify-content: start;
+  width: 40%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
   align-items: center;
 
+  @media screen and (max-width: 1428px) {
+  }
   @media screen and (max-width: 860px) {
     width: 100%;
-    margin-left: 0px;
+    flex-direction: column;
+    margin: 80px;
   }
   @media screen and (max-width: 574px) {
+    width: 100%;
     flex-direction: column;
   }
 `;
@@ -48,24 +60,20 @@ export const Coluna2 = styled.div`
   font-family: "Poppins";
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 50%;
   height: 100%;
-  margin-top: 70px;
+  gap: 100px;
   justify-content: center;
   align-items: center;
   text-align: center;
   @media screen and (max-width: 860) {
     display: flex;
-    width: 50%;
+    width: 60%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin-left: 0;
-    margin-top: 60px;
-  }
-  @media screen and (max-width: 860px) {
-    width: 100%;
   }
   @media screen and (max-width: 574px) {
   }
@@ -84,21 +92,38 @@ export const DivGeral = styled.div`
     justify-content: center;
     align-items: center;
     height: 50%;
-    gap: 70px;
   }
 `;
-export const Nome = styled.text`
+export const Put = styled.input`
   font-family: "Poppins";
   text-align: center;
   box-sizing: border-box;
   width: 100%;
-  gap: 30px;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
   font-size: 18px;
   height: 55px;
+  background: transparent;
+  border-radius: 20px;
+  border: solid 2px white;
+  color: white;
+  color: white;
+  &:hover {
+    background-color: #9998c5;
+    color: white;
+  }
+  &:focus {
+    background-color: #9998c5;
+    color: white;
+  }
+`;
+export const Nome = styled.div`
+  font-family: "Poppins";
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 58px;
   background: transparent;
   border-radius: 20px;
   border: solid 2px white;
@@ -117,24 +142,19 @@ export const Nome = styled.text`
 export const Texto = styled.text`
   text-align: center;
   box-sizing: border-box;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
   width: 100%;
+  padding: 20px;
   font-family: "Poppins";
-  height: 292px;
+  height: 100%;
   background: transparent;
   border: solid 2px white;
   border-radius: 20px;
   color: white;
   font-size: 18px;
-  @media (max-width: 664px) {
-    font-size: 15px;
-  }
-  @media (max-width: 574px) {
-  }
-
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   &:hover {
     background-color: #9998c5;
     color: white;
@@ -155,14 +175,15 @@ export const Dados = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   align-items: center;
   text-align: center;
   font-size: 18px;
-  height: 100%;
-  width: 60%;
+
+  width: 100%;
   gap: 20px;
   @media screen and (max-width: 860px) {
+    display: flex;
+    width: 150%;
   }
   @media screen and (max-width: 574) {
   }
@@ -174,34 +195,27 @@ export const Logo = styled.div`
   align-items: end;
   background-color: #2f2e6f;
 `;
-export const Canais = styled.text`
-  text-align: center;
-  box-sizing: border-box;
+
+export const Div2 = styled.div`
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 400px;
+  color: white;
   text-align: center;
   align-items: center;
-  justify-content: center;
-  width: 150%;
-  font-family: "Poppins";
-  height: 70px;
-  background: transparent;
-  border: solid 2px white;
-  border-radius: 20px;
-  color: white;
-  font-size: 18px;
-
-  &:hover {
-    background-color: #9998c5;
-    color: white;
-  }
-  &:focus {
-    background-color: #9998c5;
-    color: white;
-  }
+  gap: 5px;
 `;
-export const Imagem2 = styled.div`
-  width: 130%;
-  @media screen and (max-width: 860px) {
-    display: none;
-  }
+
+export const Form = styled.form`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
 `;
