@@ -11,6 +11,7 @@ export const Imagem = styled.image`
 export const Body = styled.div`
   background-color: #0a0a30;
   font-family: "Poppins";
+  width: 100%;
 `;
 export const Size = styled.div`
   display: flex;

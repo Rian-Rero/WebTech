@@ -4,7 +4,8 @@ export const Container = styled.div`
   background-color: #23234f;
   position: fixed;
   height: 100%;
-  top: 0; /* Alteração feita aqui */
+  top: 0;
+  cursor: default;
   font-family: "Poppins";
   left: ${(props) => (props.sidebar ? "0" : "-100%")};
   animation: showSidebar 0.4s;
@@ -12,11 +13,11 @@ export const Container = styled.div`
   > svg {
     position: fixed;
     color: white;
+    cursor: pointer;
     width: 30px;
     height: 30px;
     margin-top: 32px;
     margin-left: 32px;
-    cursor: pointer;
   }
 
   @keyframes showSidebar {

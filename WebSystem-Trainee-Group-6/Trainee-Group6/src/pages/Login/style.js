@@ -11,7 +11,8 @@ export const Imagem = styled.image`
 export const Imagem2 = styled.image`
   font-size: 1600%;
   color: white;
-  @media screen and (max-width: 1144px) {
+  @media screen and (max-width: 480px) {
+    font-size: 1200%;
   }
 `;
 export const Body = styled.div`
@@ -22,7 +23,7 @@ export const Body = styled.div`
 
 export const Coluna = styled.div`
   font-family: "Poppins";
-  margin-left: 50px;
+  margin-left: 70px;
   display: flex;
   flex-direction: column;
   width: 40%;
@@ -95,6 +96,7 @@ export const Senha = styled.input`
   border: 2px solid white;
   font-size: 18px;
   color: white;
+  padding: 10px;
   &:hover {
     background-color: #9998c5;
     color: white;
@@ -102,6 +104,9 @@ export const Senha = styled.input`
   &:focus {
     background-color: #9998c5;
     color: white;
+  }
+  @media screen and (max-width: 860px) {
+    font-size: 14px;
   }
 `;
 export const Email = styled.input`
@@ -112,6 +117,7 @@ export const Email = styled.input`
   font-family: "Poppins";
   height: 55px;
   border-radius: 20px;
+  padding: 10px;
   background: transparent;
   border: 2px solid white;
   font-size: 18px;
@@ -124,6 +130,9 @@ export const Email = styled.input`
   &:focus {
     background-color: #9998c5;
     color: white;
+  }
+  @media screen and (max-width: 860px) {
+    font-size: 14px;
   }
 `;
 

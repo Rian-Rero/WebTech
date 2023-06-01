@@ -2,13 +2,23 @@ import styled from "styled-components";
 import { Table } from "antd";
 
 export const TabelaWrapper = styled.div`
-  width: 100%;
-  overflow-x: auto;
+  overflow-x: hidden;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 70px;
 `;
 
 export const TabelaContainer = styled.div`
-  min-width: 100%;
+  width: 80vw;
   margin: 0 auto;
+
+  align-items: center;
+  justify-content: center;
 `;
 
 export const StyledTable = styled(Table)`
@@ -16,6 +26,7 @@ export const StyledTable = styled(Table)`
     background-color: #0a0a30;
     color: white;
     font-family: "Poppins";
+    max-width: 100%;
     text-align: center;
     &:hover {
       background-color: #9998c5;
@@ -52,12 +63,17 @@ export const StyledTable = styled(Table)`
 
 export const Botao = styled.button`
   background-color: #2f2e6f;
-  margin-left: 40px;
-  border: none;
+  padding: 10px;
+  width: 120px;
   cursor: pointer;
   color: white;
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 20px;
+  border: solid 2px;
+
+  &:hover {
+    background-color: #0a0a30;
+  }
 `;
 
 export const Div2 = styled.div`
@@ -71,4 +87,18 @@ export const Div2 = styled.div`
   text-align: center;
   align-items: center;
   gap: 5px;
+`;
+export const Div3 = styled.div`
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+`;
+
+export const Body = styled.div`
+  width: 100%;
 `;

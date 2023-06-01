@@ -1,19 +1,15 @@
 import React, { useState } from "react";
-import { Form, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   Body,
   Imagem,
   Coluna2,
   Put,
-  Cargo,
-  Senha,
-  Email,
+  Form,
   Texto,
-  Linha2,
   Coluna,
   DivGeral,
   Dados,
-  Logo,
   Caixa,
   Labell,
 } from "./style";

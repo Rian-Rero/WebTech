@@ -22,11 +22,6 @@ const Sidebar = ({ active }) => {
     <Container sidebar={active}>
       <AiOutlineMenu onClick={closeSidebar} />
       <Content>
-        <SidebarItem
-          Icon={RiHome5Line}
-          Text="Home"
-          onClick={() => navigate("/")}
-        />
         {!usuario && (
           <>
             <SidebarItem
@@ -43,6 +38,11 @@ const Sidebar = ({ active }) => {
         )}
         {!!usuario && (
           <>
+            <SidebarItem
+              Icon={RiHome5Line}
+              Text="Home"
+              onClick={() => navigate("/")}
+            />
             <SidebarItem
               Icon={CgProfile}
               Text="Perfil"
